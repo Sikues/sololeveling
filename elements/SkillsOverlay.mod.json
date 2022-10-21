@@ -237,27 +237,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Level: <VAR:integer:level>",
+          "text": "MP: <VAR:integer:currentstamina>/<VAR:integer:maxstamina>",
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "name": "Level: <VAR:integer:level>",
-          "x": 5,
-          "y": 155
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "Mana: <VAR:integer:currentstamina>/<VAR:integer:maxstamina>",
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "name": "Mana: <VAR:integer:currentstamina>/<VAR:integer:maxstamina>",
+          "name": "MP: <VAR:integer:currentstamina>/<VAR:integer:maxstamina>",
           "x": 6,
-          "y": 174
+          "y": 175
         }
       },
       {
@@ -577,6 +564,110 @@
           "name": "XP: <VAR:integer:cxp>/<VAR:integer:nxp>",
           "x": 6,
           "y": 189
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sololevelingranke.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Rankshower"
+          },
+          "name": "sololevelingranke.png",
+          "x": -2,
+          "y": 0
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "drank.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DrankShower"
+          },
+          "name": "drank.png",
+          "x": -13,
+          "y": 0
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "crank.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Crankshower"
+          },
+          "name": "crank.png",
+          "x": -13,
+          "y": 0
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "brank.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Branks"
+          },
+          "name": "brank.png",
+          "x": -13,
+          "y": 0
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arank.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Arank"
+          },
+          "name": "arank.png",
+          "x": -13,
+          "y": 0
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "srank.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Srank"
+          },
+          "name": "srank.png",
+          "x": -13,
+          "y": 0
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Level: <VAR:integer:level>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Level: <VAR:integer:level>",
+          "x": 34,
+          "y": 11
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Title: <VAR:Title>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Title: <VAR:Title>",
+          "x": 34,
+          "y": 22
         }
       }
     ],

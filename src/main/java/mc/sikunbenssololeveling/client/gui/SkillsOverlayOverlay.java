@@ -34,7 +34,9 @@ import mc.sikunbenssololeveling.procedures.Stmbar10Procedure;
 import mc.sikunbenssololeveling.procedures.Stmb4Procedure;
 import mc.sikunbenssololeveling.procedures.Stmb3Procedure;
 import mc.sikunbenssololeveling.procedures.StaminaBar1Procedure;
+import mc.sikunbenssololeveling.procedures.SrankProcedure;
 import mc.sikunbenssololeveling.procedures.SkillsOverlayDisplayOverlayIngameProcedure;
+import mc.sikunbenssololeveling.procedures.RankshowerProcedure;
 import mc.sikunbenssololeveling.procedures.FullxpbarProcedure;
 import mc.sikunbenssololeveling.procedures.FatiguereturnbackbarProcedure;
 import mc.sikunbenssololeveling.procedures.FatiguemaxProcedure;
@@ -47,6 +49,10 @@ import mc.sikunbenssololeveling.procedures.Fatigue5Procedure;
 import mc.sikunbenssololeveling.procedures.Fatigue4Procedure;
 import mc.sikunbenssololeveling.procedures.Fatigue3Procedure;
 import mc.sikunbenssololeveling.procedures.Fatigue2Procedure;
+import mc.sikunbenssololeveling.procedures.DrankShowerProcedure;
+import mc.sikunbenssololeveling.procedures.CrankshowerProcedure;
+import mc.sikunbenssololeveling.procedures.BranksProcedure;
+import mc.sikunbenssololeveling.procedures.ArankProcedure;
 import mc.sikunbenssololeveling.network.SikunbenssololevelingModVariables;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -155,16 +161,12 @@ public class SkillsOverlayOverlay {
 					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -209, posY + 54, 0, 0, 102, 11, 102, 11);
 				}
 				Minecraft.getInstance().font.draw(event.getMatrixStack(),
-						"Level: " + (int) ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).level) + "",
-						posX + -208, posY + 35, -1);
-				Minecraft.getInstance().font.draw(event.getMatrixStack(),
-						"Mana: " + (int) ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						"MP: " + (int) ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).currentstamina) + "/"
 								+ (int) ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 										.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).maxstamina)
 								+ "",
-						posX + -207, posY + 54, -1);
+						posX + -207, posY + 55, -1);
 				if (FatiguereturnbackbarProcedure.execute(world)) {
 					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/emptybaruniversal.png"));
 					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -210, posY + 46, 0, 0, 52, 7, 52, 7);
@@ -266,6 +268,38 @@ public class SkillsOverlayOverlay {
 										.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).nxp)
 								+ "",
 						posX + -207, posY + 69, -1);
+				if (RankshowerProcedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/sololevelingranke.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -215, posY + -120, 0, 0, 129, 40, 129, 40);
+				}
+				if (DrankShowerProcedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/drank.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -226, posY + -120, 0, 0, 140, 53, 140, 53);
+				}
+				if (CrankshowerProcedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/crank.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -226, posY + -120, 0, 0, 140, 53, 140, 53);
+				}
+				if (BranksProcedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/brank.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -226, posY + -120, 0, 0, 140, 53, 140, 53);
+				}
+				if (ArankProcedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/arank.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -226, posY + -120, 0, 0, 140, 53, 140, 53);
+				}
+				if (SrankProcedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/srank.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -226, posY + -120, 0, 0, 140, 53, 140, 53);
+				}
+				Minecraft.getInstance().font.draw(event.getMatrixStack(),
+						"Level: " + (int) ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).level) + "",
+						posX + -179, posY + -109, -1);
+				Minecraft.getInstance().font.draw(event.getMatrixStack(),
+						"Title: " + ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).Title) + "",
+						posX + -179, posY + -98, -1);
 			}
 			RenderSystem.depthMask(true);
 			RenderSystem.defaultBlendFunc();

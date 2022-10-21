@@ -100,6 +100,7 @@ public class SikunbenssololevelingModVariables {
 				clone.currentstamina = original.currentstamina;
 				clone.fatigue = original.fatigue;
 				clone.currentfatigue = original.currentfatigue;
+				clone.mpregencooldown = original.mpregencooldown;
 			}
 		}
 	}
@@ -162,6 +163,7 @@ public class SikunbenssololevelingModVariables {
 		public double shadowskeletons = 0;
 		public double shadowhorses = 0;
 		public double maxshadows = 25.0;
+		public double mpregencooldown = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -197,6 +199,7 @@ public class SikunbenssololevelingModVariables {
 			nbt.putDouble("shadowskeletons", shadowskeletons);
 			nbt.putDouble("shadowhorses", shadowhorses);
 			nbt.putDouble("maxshadows", maxshadows);
+			nbt.putDouble("mpregencooldown", mpregencooldown);
 			return nbt;
 		}
 
@@ -229,6 +232,7 @@ public class SikunbenssololevelingModVariables {
 			shadowskeletons = nbt.getDouble("shadowskeletons");
 			shadowhorses = nbt.getDouble("shadowhorses");
 			maxshadows = nbt.getDouble("maxshadows");
+			mpregencooldown = nbt.getDouble("mpregencooldown");
 		}
 	}
 
@@ -281,6 +285,7 @@ public class SikunbenssololevelingModVariables {
 					variables.shadowskeletons = message.data.shadowskeletons;
 					variables.shadowhorses = message.data.shadowhorses;
 					variables.maxshadows = message.data.maxshadows;
+					variables.mpregencooldown = message.data.mpregencooldown;
 				}
 			});
 			context.setPacketHandled(true);
