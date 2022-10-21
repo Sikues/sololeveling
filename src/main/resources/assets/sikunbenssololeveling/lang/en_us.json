@@ -1,1 +1,10 @@
-{}
+{
+  "gamerule.fatigueEnabled": "Fatigue",
+  "advancements.player.descr": "become a player by surviving the double dungeon",
+  "gamerule.startAsPlayer": "startassystemplayer",
+  "advancements.solo_leveling.title": "Player",
+  "advancements.player.title": "Player",
+  "advancements.solo_leveling.descr": "become a player by surviving the double dungeon",
+  "gamerule.fatigueEnabled.description": "fatigue requires the player to sleep before running out, running out will require the player to sleep OR drink a energy drink",
+  "gamerule.startAsPlayer.description": "should the player start as a system player without entering a double dungeon"
+}

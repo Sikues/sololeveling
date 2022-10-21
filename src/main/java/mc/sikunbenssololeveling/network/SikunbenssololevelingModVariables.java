@@ -73,7 +73,19 @@ public class SikunbenssololevelingModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PlayerVariables()));
 			clone.IsPlayer = original.IsPlayer;
+			clone.DebugMode = original.DebugMode;
+			clone.nxp = original.nxp;
+			clone.cxp = original.cxp;
+			clone.level = original.level;
+			clone.maxstamina = original.maxstamina;
+			clone.slot1ability = original.slot1ability;
+			clone.slot2ability = original.slot2ability;
+			clone.slot3ability = original.slot3ability;
+			clone.ultimateslot = original.ultimateslot;
 			if (!event.isWasDeath()) {
+				clone.currentstamina = original.currentstamina;
+				clone.fatigue = original.fatigue;
+				clone.currentfatigue = original.currentfatigue;
 			}
 		}
 	}
@@ -110,6 +122,18 @@ public class SikunbenssololevelingModVariables {
 
 	public static class PlayerVariables {
 		public boolean IsPlayer = false;
+		public boolean DebugMode = false;
+		public double nxp = 100.0;
+		public double cxp = 0;
+		public double level = 0;
+		public double currentstamina = 100.0;
+		public double maxstamina = 100.0;
+		public String slot1ability = "none";
+		public String slot2ability = "none";
+		public String slot3ability = "none";
+		public String ultimateslot = "\"\"";
+		public double fatigue = 36000.0;
+		public double currentfatigue = 36000.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -119,12 +143,36 @@ public class SikunbenssololevelingModVariables {
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putBoolean("IsPlayer", IsPlayer);
+			nbt.putBoolean("DebugMode", DebugMode);
+			nbt.putDouble("nxp", nxp);
+			nbt.putDouble("cxp", cxp);
+			nbt.putDouble("level", level);
+			nbt.putDouble("currentstamina", currentstamina);
+			nbt.putDouble("maxstamina", maxstamina);
+			nbt.putString("slot1ability", slot1ability);
+			nbt.putString("slot2ability", slot2ability);
+			nbt.putString("slot3ability", slot3ability);
+			nbt.putString("ultimateslot", ultimateslot);
+			nbt.putDouble("fatigue", fatigue);
+			nbt.putDouble("currentfatigue", currentfatigue);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
 			IsPlayer = nbt.getBoolean("IsPlayer");
+			DebugMode = nbt.getBoolean("DebugMode");
+			nxp = nbt.getDouble("nxp");
+			cxp = nbt.getDouble("cxp");
+			level = nbt.getDouble("level");
+			currentstamina = nbt.getDouble("currentstamina");
+			maxstamina = nbt.getDouble("maxstamina");
+			slot1ability = nbt.getString("slot1ability");
+			slot2ability = nbt.getString("slot2ability");
+			slot3ability = nbt.getString("slot3ability");
+			ultimateslot = nbt.getString("ultimateslot");
+			fatigue = nbt.getDouble("fatigue");
+			currentfatigue = nbt.getDouble("currentfatigue");
 		}
 	}
 
@@ -151,6 +199,18 @@ public class SikunbenssololevelingModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
 					variables.IsPlayer = message.data.IsPlayer;
+					variables.DebugMode = message.data.DebugMode;
+					variables.nxp = message.data.nxp;
+					variables.cxp = message.data.cxp;
+					variables.level = message.data.level;
+					variables.currentstamina = message.data.currentstamina;
+					variables.maxstamina = message.data.maxstamina;
+					variables.slot1ability = message.data.slot1ability;
+					variables.slot2ability = message.data.slot2ability;
+					variables.slot3ability = message.data.slot3ability;
+					variables.ultimateslot = message.data.ultimateslot;
+					variables.fatigue = message.data.fatigue;
+					variables.currentfatigue = message.data.currentfatigue;
 				}
 			});
 			context.setPacketHandled(true);

@@ -20,8 +20,8 @@
           "image": "smalltype1.png",
           "use1Xscale": true,
           "name": "smalltype1.png",
-          "x": 1,
-          "y": 181
+          "x": 42,
+          "y": 211
         }
       },
       {
@@ -30,8 +30,8 @@
           "image": "smalltype1.png",
           "use1Xscale": true,
           "name": "smalltype1.png",
-          "x": 22,
-          "y": 181
+          "x": 63,
+          "y": 211
         }
       },
       {
@@ -40,38 +40,8 @@
           "image": "smalltype1.png",
           "use1Xscale": true,
           "name": "smalltype1.png",
-          "x": 1,
-          "y": 161
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "smalltype1.png",
-          "use1Xscale": true,
-          "name": "smalltype1.png",
-          "x": 22,
-          "y": 161
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "smalltype1.png",
-          "use1Xscale": true,
-          "name": "smalltype1.png",
-          "x": 1,
-          "y": 141
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "smalltype1.png",
-          "use1Xscale": true,
-          "name": "smalltype1.png",
-          "x": 22,
-          "y": 141
+          "x": 84,
+          "y": 211
         }
       },
       {
@@ -90,8 +60,8 @@
           "image": "hourglass.png",
           "use1Xscale": true,
           "name": "hourglass.png",
-          "x": 27,
-          "y": 182
+          "x": 47,
+          "y": 212
         }
       },
       {
@@ -100,48 +70,360 @@
           "image": "hourglass.png",
           "use1Xscale": true,
           "name": "hourglass.png",
+          "x": 68,
+          "y": 212
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hourglass.png",
+          "use1Xscale": true,
+          "name": "hourglass.png",
+          "x": 89,
+          "y": 212
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "emptybaruniversal.png",
+          "use1Xscale": false,
+          "name": "emptybaruniversal.png",
+          "x": 3,
+          "y": 186
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "emptybaruniversal.png",
+          "use1Xscale": false,
+          "name": "emptybaruniversal.png",
+          "x": 3,
+          "y": 172
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "10layer.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "StaminaBar1"
+          },
+          "name": "10layer.png",
+          "x": 4,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "20layer.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Stmpb2"
+          },
+          "name": "20layer.png",
+          "x": 4,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "30layer.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Stmb3"
+          },
+          "name": "30layer.png",
+          "x": 4,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "40layer.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Stmb4"
+          },
+          "name": "40layer.png",
+          "x": 4,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "50layer.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Stmbar5"
+          },
+          "name": "50layer.png",
+          "x": 4,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "60layer.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Stmpbar6"
+          },
+          "name": "60layer.png",
+          "x": 4,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "70player.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Stmbar7"
+          },
+          "name": "70player.png",
+          "x": 4,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "80layer.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Stmbar8"
+          },
+          "name": "80layer.png",
+          "x": 4,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "90layer.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Stmbar9"
+          },
+          "name": "90layer.png",
+          "x": 4,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "100layer.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Stmbar10"
+          },
+          "name": "100layer.png",
+          "x": 4,
+          "y": 174
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Level: <VAR:integer:level>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Level: <VAR:integer:level>",
+          "x": 5,
+          "y": 155
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Mana: <VAR:integer:currentstamina>/<VAR:integer:maxstamina>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Mana: <VAR:integer:currentstamina>/<VAR:integer:maxstamina>",
           "x": 6,
-          "y": 182
+          "y": 174
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "hourglass.png",
+          "image": "emptybaruniversal.png",
           "use1Xscale": true,
-          "name": "hourglass.png",
-          "x": 6,
-          "y": 162
+          "displayCondition": {
+            "name": "Fatiguereturnbackbar"
+          },
+          "name": "emptybaruniversal.png",
+          "x": 3,
+          "y": 166
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "hourglass.png",
+          "image": "10aura.png",
           "use1Xscale": true,
-          "name": "hourglass.png",
-          "x": 27,
-          "y": 162
+          "displayCondition": {
+            "name": "FatigueBar"
+          },
+          "name": "10aura.png",
+          "x": 3,
+          "y": 167
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "hourglass.png",
+          "image": "20aura.png",
           "use1Xscale": true,
-          "name": "hourglass.png",
-          "x": 27,
-          "y": 142
+          "displayCondition": {
+            "name": "Fatigue2"
+          },
+          "name": "20aura.png",
+          "x": 4,
+          "y": 167
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "hourglass.png",
+          "image": "aura30.png",
           "use1Xscale": true,
-          "name": "hourglass.png",
-          "x": 6,
-          "y": 142
+          "displayCondition": {
+            "name": "Fatigue3"
+          },
+          "name": "aura30.png",
+          "x": 3,
+          "y": 167
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aura40.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Fatigue4"
+          },
+          "name": "aura40.png",
+          "x": 3,
+          "y": 167
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aura50.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Fatigue5"
+          },
+          "name": "aura50.png",
+          "x": 3,
+          "y": 167
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aura60.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Fatigue6"
+          },
+          "name": "aura60.png",
+          "x": 3,
+          "y": 167
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aura70.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Fatigue7"
+          },
+          "name": "aura70.png",
+          "x": 3,
+          "y": 167
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aura80.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Fatigue8"
+          },
+          "name": "aura80.png",
+          "x": 3,
+          "y": 167
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aura90.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Fatigue9"
+          },
+          "name": "aura90.png",
+          "x": 3,
+          "y": 167
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aura100.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Fatiguemax"
+          },
+          "name": "aura100.png",
+          "x": 4,
+          "y": 167
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rim.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Fatiguereturnbackbar"
+          },
+          "name": "rim.png",
+          "x": 3,
+          "y": 166
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rim.png",
+          "use1Xscale": false,
+          "name": "rim.png",
+          "x": 3,
+          "y": 172
         }
       }
     ],

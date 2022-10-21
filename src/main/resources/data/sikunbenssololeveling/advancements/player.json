@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:player_wall_head"
+    },
+    "title": {
+      "translate": "advancements.player.title"
+    },
+    "description": {
+      "translate": "advancements.player.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "player": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:polished_granite_slab"
+            ],
+            "count": {
+              "min": 999999999999999,
+              "max": 100000000000000000000
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "sikunbenssololeveling:solo_leveling"
+}
