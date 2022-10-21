@@ -940,6 +940,15 @@
         ]
       },
       "path": "~/GUI"
+    },
+    {
+      "name": "StatPage",
+      "type": "gui",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stat_page",
+      "path": "~/GUI"
     }
   ],
   "variable_elements": [

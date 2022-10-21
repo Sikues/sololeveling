@@ -1,0 +1,128 @@
+{
+  "_fv": 33,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 190,
+    "height": 152,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "stats.png",
+          "use1Xscale": true,
+          "name": "stats.png",
+          "x": 112,
+          "y": 42
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§lStrength: §r<VAR:integer:Strength>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§lStrength: §r<VAR:integer:Strength>",
+          "x": 118,
+          "y": 92
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§lVitality: §r<VAR:integer:vitality>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§lVitality: §r<VAR:integer:vitality>",
+          "x": 119,
+          "y": 113
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§lAgility: §r<VAR:integer:agility>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§lAgility: §r<VAR:integer:agility>",
+          "x": 119,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§lIntelligence: §r<VAR:integer:Intelligence>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§lIntelligence: §r<VAR:integer:Intelligence>",
+          "x": 119,
+          "y": 154
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "+",
+          "width": 9,
+          "height": 20,
+          "name": "+",
+          "x": 102,
+          "y": 86
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "+",
+          "width": 9,
+          "height": 20,
+          "name": "+",
+          "x": 102,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "+",
+          "width": 9,
+          "height": 20,
+          "name": "+",
+          "x": 102,
+          "y": 128
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "+",
+          "width": 9,
+          "height": 20,
+          "name": "+",
+          "x": 102,
+          "y": 149
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
