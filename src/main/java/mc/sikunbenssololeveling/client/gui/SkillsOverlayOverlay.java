@@ -15,6 +15,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.Minecraft;
 
+import mc.sikunbenssololeveling.procedures.XpbarProcedure;
+import mc.sikunbenssololeveling.procedures.Xpbar9Procedure;
+import mc.sikunbenssololeveling.procedures.Xpbar8Procedure;
+import mc.sikunbenssololeveling.procedures.Xpbar7Procedure;
+import mc.sikunbenssololeveling.procedures.Xpbar6Procedure;
+import mc.sikunbenssololeveling.procedures.Xpbar5Procedure;
+import mc.sikunbenssololeveling.procedures.Xpbar4Procedure;
+import mc.sikunbenssololeveling.procedures.Xpbar3Procedure;
+import mc.sikunbenssololeveling.procedures.Xpbar2Procedure;
 import mc.sikunbenssololeveling.procedures.Stmpbar6Procedure;
 import mc.sikunbenssololeveling.procedures.Stmpb2Procedure;
 import mc.sikunbenssololeveling.procedures.Stmbar9Procedure;
@@ -26,6 +35,7 @@ import mc.sikunbenssololeveling.procedures.Stmb4Procedure;
 import mc.sikunbenssololeveling.procedures.Stmb3Procedure;
 import mc.sikunbenssololeveling.procedures.StaminaBar1Procedure;
 import mc.sikunbenssololeveling.procedures.SkillsOverlayDisplayOverlayIngameProcedure;
+import mc.sikunbenssololeveling.procedures.FullxpbarProcedure;
 import mc.sikunbenssololeveling.procedures.FatiguereturnbackbarProcedure;
 import mc.sikunbenssololeveling.procedures.FatiguemaxProcedure;
 import mc.sikunbenssololeveling.procedures.FatigueBarProcedure;
@@ -206,6 +216,56 @@ public class SkillsOverlayOverlay {
 				RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/rim.png"));
 				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -210, posY + 52, 0, 0, 104, 15, 104, 15);
 
+				if (XpbarProcedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/tenpercentfullbar.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -210, posY + 66, 0, 0, 104, 15, 104, 15);
+				}
+				if (Xpbar2Procedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/20percentbar.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -210, posY + 66, 0, 0, 104, 15, 104, 15);
+				}
+				if (Xpbar3Procedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/thirtypercentbar.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -210, posY + 66, 0, 0, 104, 15, 104, 15);
+				}
+				if (Xpbar4Procedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/fourtypercentbar.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -210, posY + 66, 0, 0, 104, 15, 104, 15);
+				}
+				if (Xpbar5Procedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/fiftypercentui.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -210, posY + 66, 0, 0, 104, 15, 104, 15);
+				}
+				if (Xpbar6Procedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/sixtypercentui.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -210, posY + 66, 0, 0, 104, 15, 104, 15);
+				}
+				if (Xpbar7Procedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/seventypercentbarui.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -210, posY + 66, 0, 0, 104, 15, 104, 15);
+				}
+				if (Xpbar8Procedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/80ui.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -210, posY + 66, 0, 0, 104, 15, 104, 15);
+				}
+				if (Xpbar9Procedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/90ui.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -210, posY + 66, 0, 0, 104, 15, 104, 15);
+				}
+				if (FullxpbarProcedure.execute(entity)) {
+					RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/100ui.png"));
+					Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -210, posY + 66, 0, 0, 104, 15, 104, 15);
+				}
+				RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/rim.png"));
+				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + -210, posY + 66, 0, 0, 104, 15, 104, 15);
+
+				Minecraft.getInstance().font.draw(event.getMatrixStack(),
+						"XP: " + (int) ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).cxp) + "/"
+								+ (int) ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).nxp)
+								+ "",
+						posX + -207, posY + 69, -1);
 			}
 			RenderSystem.depthMask(true);
 			RenderSystem.defaultBlendFunc();

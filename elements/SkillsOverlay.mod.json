@@ -425,6 +425,159 @@
           "x": 3,
           "y": 172
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tenpercentfullbar.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Xpbar"
+          },
+          "name": "tenpercentfullbar.png",
+          "x": 3,
+          "y": 186
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "20percentbar.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Xpbar2"
+          },
+          "name": "20percentbar.png",
+          "x": 3,
+          "y": 186
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "thirtypercentbar.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Xpbar3"
+          },
+          "name": "thirtypercentbar.png",
+          "x": 3,
+          "y": 186
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fourtypercentbar.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Xpbar4"
+          },
+          "name": "fourtypercentbar.png",
+          "x": 3,
+          "y": 186
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fiftypercentui.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Xpbar5"
+          },
+          "name": "fiftypercentui.png",
+          "x": 3,
+          "y": 186
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sixtypercentui.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Xpbar6"
+          },
+          "name": "sixtypercentui.png",
+          "x": 3,
+          "y": 186
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "seventypercentbarui.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Xpbar7"
+          },
+          "name": "seventypercentbarui.png",
+          "x": 3,
+          "y": 186
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "80ui.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Xpbar8"
+          },
+          "name": "80ui.png",
+          "x": 3,
+          "y": 186
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "90ui.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Xpbar9"
+          },
+          "name": "90ui.png",
+          "x": 3,
+          "y": 186
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "100ui.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fullxpbar"
+          },
+          "name": "100ui.png",
+          "x": 3,
+          "y": 186
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rim.png",
+          "use1Xscale": false,
+          "name": "rim.png",
+          "x": 3,
+          "y": 186
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "XP: <VAR:integer:cxp>/<VAR:integer:nxp>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "XP: <VAR:integer:cxp>/<VAR:integer:nxp>",
+          "x": 6,
+          "y": 189
+        }
       }
     ],
     "baseTexture": "",

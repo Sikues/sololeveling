@@ -82,6 +82,14 @@ public class SikunbenssololevelingModVariables {
 			clone.slot2ability = original.slot2ability;
 			clone.slot3ability = original.slot3ability;
 			clone.ultimateslot = original.ultimateslot;
+			clone.Strength = original.Strength;
+			clone.vitality = original.vitality;
+			clone.Intelligence = original.Intelligence;
+			clone.agility = original.agility;
+			clone.name = original.name;
+			clone.Title = original.Title;
+			clone.Job = original.Job;
+			clone.statpoints = original.statpoints;
 			if (!event.isWasDeath()) {
 				clone.currentstamina = original.currentstamina;
 				clone.fatigue = original.fatigue;
@@ -134,6 +142,14 @@ public class SikunbenssololevelingModVariables {
 		public String ultimateslot = "\"\"";
 		public double fatigue = 36000.0;
 		public double currentfatigue = 36000.0;
+		public double Strength = 0;
+		public double vitality = 0;
+		public double Intelligence = 0;
+		public double agility = 0;
+		public String name = "N/A";
+		public String Title = " ";
+		public String Job = "none";
+		public double statpoints = 15.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -155,6 +171,14 @@ public class SikunbenssololevelingModVariables {
 			nbt.putString("ultimateslot", ultimateslot);
 			nbt.putDouble("fatigue", fatigue);
 			nbt.putDouble("currentfatigue", currentfatigue);
+			nbt.putDouble("Strength", Strength);
+			nbt.putDouble("vitality", vitality);
+			nbt.putDouble("Intelligence", Intelligence);
+			nbt.putDouble("agility", agility);
+			nbt.putString("name", name);
+			nbt.putString("Title", Title);
+			nbt.putString("Job", Job);
+			nbt.putDouble("statpoints", statpoints);
 			return nbt;
 		}
 
@@ -173,6 +197,14 @@ public class SikunbenssololevelingModVariables {
 			ultimateslot = nbt.getString("ultimateslot");
 			fatigue = nbt.getDouble("fatigue");
 			currentfatigue = nbt.getDouble("currentfatigue");
+			Strength = nbt.getDouble("Strength");
+			vitality = nbt.getDouble("vitality");
+			Intelligence = nbt.getDouble("Intelligence");
+			agility = nbt.getDouble("agility");
+			name = nbt.getString("name");
+			Title = nbt.getString("Title");
+			Job = nbt.getString("Job");
+			statpoints = nbt.getDouble("statpoints");
 		}
 	}
 
@@ -211,6 +243,14 @@ public class SikunbenssololevelingModVariables {
 					variables.ultimateslot = message.data.ultimateslot;
 					variables.fatigue = message.data.fatigue;
 					variables.currentfatigue = message.data.currentfatigue;
+					variables.Strength = message.data.Strength;
+					variables.vitality = message.data.vitality;
+					variables.Intelligence = message.data.Intelligence;
+					variables.agility = message.data.agility;
+					variables.name = message.data.name;
+					variables.Title = message.data.Title;
+					variables.Job = message.data.Job;
+					variables.statpoints = message.data.statpoints;
 				}
 			});
 			context.setPacketHandled(true);
