@@ -845,6 +845,42 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "15.0"
+    },
+    {
+      "name": "Rank",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "E"
+    },
+    {
+      "name": "shadowdogs",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "shadowzombies",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "shadowskeletons",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "shadowhorses",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "maxshadows",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "25.0"
     }
   ],
   "sound_elements": [],
@@ -923,6 +959,10 @@
       },
       {
         "name": "Commands",
+        "children": []
+      },
+      {
+        "name": "shadows",
         "children": []
       }
     ]

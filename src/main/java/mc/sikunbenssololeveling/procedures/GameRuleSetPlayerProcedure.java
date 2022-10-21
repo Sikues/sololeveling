@@ -37,18 +37,29 @@ public class GameRuleSetPlayerProcedure {
 		if (entity == null)
 			return;
 		if (world.getLevelData().getGameRules().getBoolean(SikunbenssololevelingModGameRules.STARTASPLAYER) == true) {
-			if (!(entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-					? _plr.getAdvancements()
-							.getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("sikunbenssololeveling:player")))
-							.isDone()
-					: false)) {
-				if (entity instanceof ServerPlayer _player) {
-					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("sikunbenssololeveling:player"));
-					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+			if ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).IsPlayer == false) {
+				if (!(entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+						? _plr.getAdvancements()
+								.getOrStartProgress(
+										_plr.server.getAdvancements().getAdvancement(new ResourceLocation("sikunbenssololeveling:player")))
+								.isDone()
+						: false)) {
+					if (entity instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("sikunbenssololeveling:player"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemainingCriteria().iterator();
+							while (_iterator.hasNext())
+								_player.getAdvancements().award(_adv, (String) _iterator.next());
+						}
+					}
+					{
+						boolean _setval = true;
+						entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.IsPlayer = _setval;
+							capability.syncPlayerVariables(entity);
+						});
 					}
 				}
 				{
@@ -58,13 +69,6 @@ public class GameRuleSetPlayerProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-			}
-			{
-				boolean _setval = true;
-				entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.IsPlayer = _setval;
-					capability.syncPlayerVariables(entity);
-				});
 			}
 		}
 	}

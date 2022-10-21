@@ -90,6 +90,12 @@ public class SikunbenssololevelingModVariables {
 			clone.Title = original.Title;
 			clone.Job = original.Job;
 			clone.statpoints = original.statpoints;
+			clone.Rank = original.Rank;
+			clone.shadowdogs = original.shadowdogs;
+			clone.shadowzombies = original.shadowzombies;
+			clone.shadowskeletons = original.shadowskeletons;
+			clone.shadowhorses = original.shadowhorses;
+			clone.maxshadows = original.maxshadows;
 			if (!event.isWasDeath()) {
 				clone.currentstamina = original.currentstamina;
 				clone.fatigue = original.fatigue;
@@ -150,6 +156,12 @@ public class SikunbenssololevelingModVariables {
 		public String Title = " ";
 		public String Job = "none";
 		public double statpoints = 15.0;
+		public String Rank = "E";
+		public double shadowdogs = 0;
+		public double shadowzombies = 0;
+		public double shadowskeletons = 0;
+		public double shadowhorses = 0;
+		public double maxshadows = 25.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -179,6 +191,12 @@ public class SikunbenssololevelingModVariables {
 			nbt.putString("Title", Title);
 			nbt.putString("Job", Job);
 			nbt.putDouble("statpoints", statpoints);
+			nbt.putString("Rank", Rank);
+			nbt.putDouble("shadowdogs", shadowdogs);
+			nbt.putDouble("shadowzombies", shadowzombies);
+			nbt.putDouble("shadowskeletons", shadowskeletons);
+			nbt.putDouble("shadowhorses", shadowhorses);
+			nbt.putDouble("maxshadows", maxshadows);
 			return nbt;
 		}
 
@@ -205,6 +223,12 @@ public class SikunbenssololevelingModVariables {
 			Title = nbt.getString("Title");
 			Job = nbt.getString("Job");
 			statpoints = nbt.getDouble("statpoints");
+			Rank = nbt.getString("Rank");
+			shadowdogs = nbt.getDouble("shadowdogs");
+			shadowzombies = nbt.getDouble("shadowzombies");
+			shadowskeletons = nbt.getDouble("shadowskeletons");
+			shadowhorses = nbt.getDouble("shadowhorses");
+			maxshadows = nbt.getDouble("maxshadows");
 		}
 	}
 
@@ -251,6 +275,12 @@ public class SikunbenssololevelingModVariables {
 					variables.Title = message.data.Title;
 					variables.Job = message.data.Job;
 					variables.statpoints = message.data.statpoints;
+					variables.Rank = message.data.Rank;
+					variables.shadowdogs = message.data.shadowdogs;
+					variables.shadowzombies = message.data.shadowzombies;
+					variables.shadowskeletons = message.data.shadowskeletons;
+					variables.shadowhorses = message.data.shadowhorses;
+					variables.maxshadows = message.data.maxshadows;
 				}
 			});
 			context.setPacketHandled(true);
