@@ -1,0 +1,161 @@
+{
+  "_fv": 33,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "slottype2.png",
+          "use1Xscale": true,
+          "name": "slottype2.png",
+          "x": 2,
+          "y": 201
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smalltype1.png",
+          "use1Xscale": true,
+          "name": "smalltype1.png",
+          "x": 1,
+          "y": 181
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smalltype1.png",
+          "use1Xscale": true,
+          "name": "smalltype1.png",
+          "x": 22,
+          "y": 181
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smalltype1.png",
+          "use1Xscale": true,
+          "name": "smalltype1.png",
+          "x": 1,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smalltype1.png",
+          "use1Xscale": true,
+          "name": "smalltype1.png",
+          "x": 22,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smalltype1.png",
+          "use1Xscale": true,
+          "name": "smalltype1.png",
+          "x": 1,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smalltype1.png",
+          "use1Xscale": true,
+          "name": "smalltype1.png",
+          "x": 22,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hourglass.png",
+          "use1Xscale": false,
+          "name": "hourglass.png",
+          "x": 11,
+          "y": 203
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hourglass.png",
+          "use1Xscale": true,
+          "name": "hourglass.png",
+          "x": 27,
+          "y": 182
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hourglass.png",
+          "use1Xscale": true,
+          "name": "hourglass.png",
+          "x": 6,
+          "y": 182
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hourglass.png",
+          "use1Xscale": true,
+          "name": "hourglass.png",
+          "x": 6,
+          "y": 162
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hourglass.png",
+          "use1Xscale": true,
+          "name": "hourglass.png",
+          "x": 27,
+          "y": 162
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hourglass.png",
+          "use1Xscale": true,
+          "name": "hourglass.png",
+          "x": 27,
+          "y": 142
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hourglass.png",
+          "use1Xscale": true,
+          "name": "hourglass.png",
+          "x": 6,
+          "y": 142
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "SkillsOverlayDisplayOverlayIngame"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

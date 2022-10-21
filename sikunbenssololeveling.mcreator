@@ -1,21 +1,99 @@
 {
-  "mod_elements": [],
-  "variable_elements": [],
+  "mod_elements": [
+    {
+      "name": "SkillsOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skills_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "SkillsOverlay",
+      "type": "overlay",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skills_overlay",
+      "path": "~/GUI"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "IsPlayer",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {}
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Skills",
+        "children": [
+          {
+            "name": "CommonSkills",
+            "children": []
+          },
+          {
+            "name": "Rare Skills",
+            "children": []
+          },
+          {
+            "name": "Legendary Skills",
+            "children": []
+          },
+          {
+            "name": "Job Skills",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "GUI",
+        "children": []
+      },
+      {
+        "name": "LevelStuff",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Armor",
+        "children": []
+      },
+      {
+        "name": "Stamina",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "sikunbenssololeveling",
     "modName": "SikunBensSoloLeveling",
     "version": "1.0.0",
-    "author": "Skudius, MCreator",
-    "websiteURL": "https://mcreator.net",
-    "license": "Academic Free License v3.0",
+    "description": "A mod based on solo leveling, the player can go through dungeons and become stronger and stronger!",
+    "author": "Siku, TechnoBen",
+    "websiteURL": "https://www.curseforge.com/members/siikkuu/",
+    "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -23,6 +101,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.18.2",
+    "credits": "https://www.curseforge.com/members/siikkuu/",
     "modElementsPackage": "mc.sikunbenssololeveling",
     "lockBaseModFiles": false
   },

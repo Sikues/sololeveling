@@ -1,14 +1,17 @@
 modLoader="javafml"
 loaderVersion="[40,)"
-license="Academic Free License v3.0"
+license="All Rights Reserved"
 
 [[mods]]
 modId="sikunbenssololeveling"
 version="1.0.0"
 displayName="SikunBensSoloLeveling"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
-authors="Skudius, MCreator"
+credits="https://www.curseforge.com/members/siikkuu/"
+displayURL="https://www.curseforge.com/members/siikkuu/"
+authors="Siku, TechnoBen"
+description='''
+A mod based on solo leveling, the player can go through dungeons and become stronger and stronger!
+'''
 
 [[dependencies.sikunbenssololeveling]]
     modId="minecraft"
