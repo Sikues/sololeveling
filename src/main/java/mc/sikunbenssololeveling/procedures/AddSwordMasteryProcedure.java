@@ -14,7 +14,7 @@ import mc.sikunbenssololeveling.network.SikunbenssololevelingModVariables;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class LevelAddProcedure {
+public class AddSwordMasteryProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
@@ -29,35 +29,37 @@ public class LevelAddProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).cxp > (entity
+		if (((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).swordcxp > (entity
 						.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).nxp
+						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).swordnxp
 				|| (entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).cxp == (entity
+						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).swordcxp == (entity
 								.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).nxp) {
+								.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).swordnxp)
+				&& (entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).SwordMastery < 50) {
 			{
 				double _setval = (entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).cxp
+						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).swordcxp
 						- (entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).nxp;
+								.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).swordnxp;
 				entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.cxp = _setval;
+					capability.swordcxp = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
 				double _setval = (entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).nxp + 100;
+						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).swordnxp + 100;
 				entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.nxp = _setval;
+					capability.swordnxp = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
 				double _setval = (entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).statpoints + 5;
+						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).statpoints + 1;
 				entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.statpoints = _setval;
 					capability.syncPlayerVariables(entity);
@@ -65,22 +67,14 @@ public class LevelAddProcedure {
 			}
 			{
 				double _setval = (entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).maxstamina + 25;
+						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).SwordMastery + 1;
 				entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.maxstamina = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = (entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).level + 1;
-				entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.level = _setval;
+					capability.SwordMastery = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent("\u00A7e\u00A7lLeveled up!"), (false));
+				_player.displayClientMessage(new TextComponent("\u00A7e\u00A7lWeapon Mastery Increased!"), (false));
 		}
 	}
 }

@@ -96,6 +96,12 @@ public class SikunbenssololevelingModVariables {
 			clone.shadowskeletons = original.shadowskeletons;
 			clone.shadowhorses = original.shadowhorses;
 			clone.maxshadows = original.maxshadows;
+			clone.miningmastery = original.miningmastery;
+			clone.miningmcxp = original.miningmcxp;
+			clone.miningmnxp = original.miningmnxp;
+			clone.SwordMastery = original.SwordMastery;
+			clone.swordcxp = original.swordcxp;
+			clone.swordnxp = original.swordnxp;
 			if (!event.isWasDeath()) {
 				clone.currentstamina = original.currentstamina;
 				clone.fatigue = original.fatigue;
@@ -164,6 +170,12 @@ public class SikunbenssololevelingModVariables {
 		public double shadowhorses = 0;
 		public double maxshadows = 25.0;
 		public double mpregencooldown = 0;
+		public double miningmastery = 0;
+		public double miningmcxp = 0.0;
+		public double miningmnxp = 100.0;
+		public double SwordMastery = 0;
+		public double swordcxp = 0;
+		public double swordnxp = 100.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -200,6 +212,12 @@ public class SikunbenssololevelingModVariables {
 			nbt.putDouble("shadowhorses", shadowhorses);
 			nbt.putDouble("maxshadows", maxshadows);
 			nbt.putDouble("mpregencooldown", mpregencooldown);
+			nbt.putDouble("miningmastery", miningmastery);
+			nbt.putDouble("miningmcxp", miningmcxp);
+			nbt.putDouble("miningmnxp", miningmnxp);
+			nbt.putDouble("SwordMastery", SwordMastery);
+			nbt.putDouble("swordcxp", swordcxp);
+			nbt.putDouble("swordnxp", swordnxp);
 			return nbt;
 		}
 
@@ -233,6 +251,12 @@ public class SikunbenssololevelingModVariables {
 			shadowhorses = nbt.getDouble("shadowhorses");
 			maxshadows = nbt.getDouble("maxshadows");
 			mpregencooldown = nbt.getDouble("mpregencooldown");
+			miningmastery = nbt.getDouble("miningmastery");
+			miningmcxp = nbt.getDouble("miningmcxp");
+			miningmnxp = nbt.getDouble("miningmnxp");
+			SwordMastery = nbt.getDouble("SwordMastery");
+			swordcxp = nbt.getDouble("swordcxp");
+			swordnxp = nbt.getDouble("swordnxp");
 		}
 	}
 
@@ -286,6 +310,12 @@ public class SikunbenssololevelingModVariables {
 					variables.shadowhorses = message.data.shadowhorses;
 					variables.maxshadows = message.data.maxshadows;
 					variables.mpregencooldown = message.data.mpregencooldown;
+					variables.miningmastery = message.data.miningmastery;
+					variables.miningmcxp = message.data.miningmcxp;
+					variables.miningmnxp = message.data.miningmnxp;
+					variables.SwordMastery = message.data.SwordMastery;
+					variables.swordcxp = message.data.swordcxp;
+					variables.swordnxp = message.data.swordnxp;
 				}
 			});
 			context.setPacketHandled(true);

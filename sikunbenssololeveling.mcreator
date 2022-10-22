@@ -949,6 +949,61 @@
       "locked_code": false,
       "registry_name": "stat_page",
       "path": "~/GUI"
+    },
+    {
+      "name": "AddLevelMining",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_level_mining",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelStuff/miningmastery"
+    },
+    {
+      "name": "AddSwordMastery",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_sword_mastery",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelStuff/sword mastery"
+    },
+    {
+      "name": "AddMasteryOnKill",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_mastery_on_kill",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/LevelStuff/sword mastery"
     }
   ],
   "variable_elements": [
@@ -1119,6 +1174,42 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
+    },
+    {
+      "name": "miningmastery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "miningmcxp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "miningmnxp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "100.0"
+    },
+    {
+      "name": "SwordMastery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "swordcxp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "swordnxp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "100.0"
     }
   ],
   "sound_elements": [],
@@ -1181,7 +1272,16 @@
       },
       {
         "name": "LevelStuff",
-        "children": []
+        "children": [
+          {
+            "name": "miningmastery",
+            "children": []
+          },
+          {
+            "name": "sword mastery",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Items",
