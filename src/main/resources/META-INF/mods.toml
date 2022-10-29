@@ -22,4 +22,22 @@ A mod based on solo leveling, the player can go through dungeons and become stro
 
 
 
+[[dependencies.sikunbenssololeveling]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sikunbenssololeveling]]
+    modId="playeranimator"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sikunbenssololeveling]]
+    modId="allmods"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

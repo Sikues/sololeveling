@@ -28,7 +28,7 @@ public class RegenStamProcedure {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).mpregencooldown < 30) {
+				.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).mpregencooldown < 100) {
 			{
 				double _setval = (entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).mpregencooldown + 1;
@@ -38,7 +38,7 @@ public class RegenStamProcedure {
 				});
 			}
 		} else if ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).mpregencooldown > 29
+				.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).mpregencooldown > 99
 				&& (entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).currentstamina < (entity
 								.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)

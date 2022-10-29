@@ -7,81 +7,11 @@
       {
         "type": "image",
         "data": {
-          "image": "slottype2.png",
-          "use1Xscale": true,
-          "name": "slottype2.png",
-          "x": 2,
-          "y": 201
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "smalltype1.png",
-          "use1Xscale": true,
-          "name": "smalltype1.png",
-          "x": 42,
-          "y": 211
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "smalltype1.png",
-          "use1Xscale": true,
-          "name": "smalltype1.png",
-          "x": 63,
-          "y": 211
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "smalltype1.png",
-          "use1Xscale": true,
-          "name": "smalltype1.png",
-          "x": 84,
-          "y": 211
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "hourglass.png",
+          "image": "emptybaruniversal.png",
           "use1Xscale": false,
-          "name": "hourglass.png",
-          "x": 11,
-          "y": 203
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "hourglass.png",
-          "use1Xscale": true,
-          "name": "hourglass.png",
-          "x": 47,
-          "y": 212
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "hourglass.png",
-          "use1Xscale": true,
-          "name": "hourglass.png",
-          "x": 68,
-          "y": 212
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "hourglass.png",
-          "use1Xscale": true,
-          "name": "hourglass.png",
-          "x": 89,
-          "y": 212
+          "name": "emptybaruniversal.png",
+          "x": 1,
+          "y": 224
         }
       },
       {
@@ -90,18 +20,8 @@
           "image": "emptybaruniversal.png",
           "use1Xscale": false,
           "name": "emptybaruniversal.png",
-          "x": 3,
-          "y": 186
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "emptybaruniversal.png",
-          "use1Xscale": false,
-          "name": "emptybaruniversal.png",
-          "x": 3,
-          "y": 172
+          "x": 1,
+          "y": 210
         }
       },
       {
@@ -113,8 +33,8 @@
             "name": "StaminaBar1"
           },
           "name": "10layer.png",
-          "x": 4,
-          "y": 174
+          "x": 2,
+          "y": 212
         }
       },
       {
@@ -126,8 +46,8 @@
             "name": "Stmpb2"
           },
           "name": "20layer.png",
-          "x": 4,
-          "y": 174
+          "x": 2,
+          "y": 212
         }
       },
       {
@@ -139,8 +59,8 @@
             "name": "Stmb3"
           },
           "name": "30layer.png",
-          "x": 4,
-          "y": 174
+          "x": 2,
+          "y": 212
         }
       },
       {
@@ -152,8 +72,8 @@
             "name": "Stmb4"
           },
           "name": "40layer.png",
-          "x": 4,
-          "y": 174
+          "x": 2,
+          "y": 212
         }
       },
       {
@@ -165,8 +85,8 @@
             "name": "Stmbar5"
           },
           "name": "50layer.png",
-          "x": 4,
-          "y": 174
+          "x": 2,
+          "y": 212
         }
       },
       {
@@ -178,8 +98,8 @@
             "name": "Stmpbar6"
           },
           "name": "60layer.png",
-          "x": 4,
-          "y": 174
+          "x": 2,
+          "y": 212
         }
       },
       {
@@ -191,8 +111,8 @@
             "name": "Stmbar7"
           },
           "name": "70player.png",
-          "x": 4,
-          "y": 174
+          "x": 2,
+          "y": 212
         }
       },
       {
@@ -204,8 +124,8 @@
             "name": "Stmbar8"
           },
           "name": "80layer.png",
-          "x": 4,
-          "y": 174
+          "x": 2,
+          "y": 212
         }
       },
       {
@@ -217,8 +137,8 @@
             "name": "Stmbar9"
           },
           "name": "90layer.png",
-          "x": 4,
-          "y": 174
+          "x": 2,
+          "y": 212
         }
       },
       {
@@ -230,8 +150,21 @@
             "name": "Stmbar10"
           },
           "name": "100layer.png",
-          "x": 4,
-          "y": 174
+          "x": 2,
+          "y": 212
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "MP: <VAR:integer:currentstamina>/<VAR:integer:maxstamina>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "MP: <VAR:integer:currentstamina>/<VAR:integer:maxstamina>",
+          "x": 3,
+          "y": 214
         }
       },
       {
@@ -243,8 +176,8 @@
             "falpha": 0.0
           },
           "name": "MP: <VAR:integer:currentstamina>/<VAR:integer:maxstamina>",
-          "x": 6,
-          "y": 175
+          "x": 2,
+          "y": 213
         }
       },
       {
@@ -256,8 +189,8 @@
             "name": "Fatiguereturnbackbar"
           },
           "name": "emptybaruniversal.png",
-          "x": 3,
-          "y": 166
+          "x": 1,
+          "y": 203
         }
       },
       {
@@ -269,8 +202,8 @@
             "name": "FatigueBar"
           },
           "name": "10aura.png",
-          "x": 3,
-          "y": 167
+          "x": 1,
+          "y": 204
         }
       },
       {
@@ -282,8 +215,8 @@
             "name": "Fatigue2"
           },
           "name": "20aura.png",
-          "x": 4,
-          "y": 167
+          "x": 1,
+          "y": 204
         }
       },
       {
@@ -295,8 +228,8 @@
             "name": "Fatigue3"
           },
           "name": "aura30.png",
-          "x": 3,
-          "y": 167
+          "x": 2,
+          "y": 204
         }
       },
       {
@@ -308,8 +241,8 @@
             "name": "Fatigue4"
           },
           "name": "aura40.png",
-          "x": 3,
-          "y": 167
+          "x": 1,
+          "y": 204
         }
       },
       {
@@ -321,8 +254,8 @@
             "name": "Fatigue5"
           },
           "name": "aura50.png",
-          "x": 3,
-          "y": 167
+          "x": 1,
+          "y": 204
         }
       },
       {
@@ -334,8 +267,8 @@
             "name": "Fatigue6"
           },
           "name": "aura60.png",
-          "x": 3,
-          "y": 167
+          "x": 1,
+          "y": 204
         }
       },
       {
@@ -347,8 +280,8 @@
             "name": "Fatigue7"
           },
           "name": "aura70.png",
-          "x": 3,
-          "y": 167
+          "x": 1,
+          "y": 204
         }
       },
       {
@@ -360,8 +293,8 @@
             "name": "Fatigue8"
           },
           "name": "aura80.png",
-          "x": 3,
-          "y": 167
+          "x": 1,
+          "y": 204
         }
       },
       {
@@ -373,8 +306,8 @@
             "name": "Fatigue9"
           },
           "name": "aura90.png",
-          "x": 3,
-          "y": 167
+          "x": 1,
+          "y": 204
         }
       },
       {
@@ -386,8 +319,8 @@
             "name": "Fatiguemax"
           },
           "name": "aura100.png",
-          "x": 4,
-          "y": 167
+          "x": 2,
+          "y": 204
         }
       },
       {
@@ -399,8 +332,8 @@
             "name": "Fatiguereturnbackbar"
           },
           "name": "rim.png",
-          "x": 3,
-          "y": 166
+          "x": 1,
+          "y": 203
         }
       },
       {
@@ -409,8 +342,8 @@
           "image": "rim.png",
           "use1Xscale": false,
           "name": "rim.png",
-          "x": 3,
-          "y": 172
+          "x": 1,
+          "y": 210
         }
       },
       {
@@ -422,8 +355,8 @@
             "name": "Xpbar"
           },
           "name": "tenpercentfullbar.png",
-          "x": 3,
-          "y": 186
+          "x": 1,
+          "y": 224
         }
       },
       {
@@ -435,8 +368,8 @@
             "name": "Xpbar2"
           },
           "name": "20percentbar.png",
-          "x": 3,
-          "y": 186
+          "x": 1,
+          "y": 224
         }
       },
       {
@@ -448,8 +381,8 @@
             "name": "Xpbar3"
           },
           "name": "thirtypercentbar.png",
-          "x": 3,
-          "y": 186
+          "x": 1,
+          "y": 224
         }
       },
       {
@@ -461,8 +394,8 @@
             "name": "Xpbar4"
           },
           "name": "fourtypercentbar.png",
-          "x": 3,
-          "y": 186
+          "x": 1,
+          "y": 224
         }
       },
       {
@@ -474,8 +407,8 @@
             "name": "Xpbar5"
           },
           "name": "fiftypercentui.png",
-          "x": 3,
-          "y": 186
+          "x": 1,
+          "y": 224
         }
       },
       {
@@ -487,8 +420,8 @@
             "name": "Xpbar6"
           },
           "name": "sixtypercentui.png",
-          "x": 3,
-          "y": 186
+          "x": 1,
+          "y": 224
         }
       },
       {
@@ -500,8 +433,8 @@
             "name": "Xpbar7"
           },
           "name": "seventypercentbarui.png",
-          "x": 3,
-          "y": 186
+          "x": 1,
+          "y": 224
         }
       },
       {
@@ -513,8 +446,8 @@
             "name": "Xpbar8"
           },
           "name": "80ui.png",
-          "x": 3,
-          "y": 186
+          "x": 1,
+          "y": 224
         }
       },
       {
@@ -526,8 +459,8 @@
             "name": "Xpbar9"
           },
           "name": "90ui.png",
-          "x": 3,
-          "y": 186
+          "x": 1,
+          "y": 224
         }
       },
       {
@@ -539,8 +472,8 @@
             "name": "Fullxpbar"
           },
           "name": "100ui.png",
-          "x": 3,
-          "y": 186
+          "x": 1,
+          "y": 224
         }
       },
       {
@@ -549,8 +482,21 @@
           "image": "rim.png",
           "use1Xscale": false,
           "name": "rim.png",
+          "x": 1,
+          "y": 224
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "XP: <VAR:integer:cxp>/<VAR:integer:nxp>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "XP: <VAR:integer:cxp>/<VAR:integer:nxp>",
           "x": 3,
-          "y": 186
+          "y": 228
         }
       },
       {
@@ -562,8 +508,8 @@
             "falpha": 0.0
           },
           "name": "XP: <VAR:integer:cxp>/<VAR:integer:nxp>",
-          "x": 6,
-          "y": 189
+          "x": 2,
+          "y": 227
         }
       },
       {
@@ -649,6 +595,19 @@
         "data": {
           "text": "Level: <VAR:integer:level>",
           "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Level: <VAR:integer:level>",
+          "x": 35,
+          "y": 12
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Level: <VAR:integer:level>",
+          "color": {
             "value": -1,
             "falpha": 0.0
           },
@@ -660,12 +619,25 @@
       {
         "type": "label",
         "data": {
-          "text": "Title: <VAR:Title>",
+          "text": "Job: <VAR:Job>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Job: <VAR:Job>",
+          "x": 35,
+          "y": 23
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Job: <VAR:Job>",
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "name": "Title: <VAR:Title>",
+          "name": "Job: <VAR:Job>",
           "x": 34,
           "y": 22
         }

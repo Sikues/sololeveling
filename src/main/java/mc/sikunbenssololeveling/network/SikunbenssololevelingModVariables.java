@@ -102,6 +102,7 @@ public class SikunbenssololevelingModVariables {
 			clone.SwordMastery = original.SwordMastery;
 			clone.swordcxp = original.swordcxp;
 			clone.swordnxp = original.swordnxp;
+			clone.slot4ability = original.slot4ability;
 			if (!event.isWasDeath()) {
 				clone.currentstamina = original.currentstamina;
 				clone.fatigue = original.fatigue;
@@ -176,6 +177,7 @@ public class SikunbenssololevelingModVariables {
 		public double SwordMastery = 0;
 		public double swordcxp = 0;
 		public double swordnxp = 100.0;
+		public String slot4ability = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -218,6 +220,7 @@ public class SikunbenssololevelingModVariables {
 			nbt.putDouble("SwordMastery", SwordMastery);
 			nbt.putDouble("swordcxp", swordcxp);
 			nbt.putDouble("swordnxp", swordnxp);
+			nbt.putString("slot4ability", slot4ability);
 			return nbt;
 		}
 
@@ -257,6 +260,7 @@ public class SikunbenssololevelingModVariables {
 			SwordMastery = nbt.getDouble("SwordMastery");
 			swordcxp = nbt.getDouble("swordcxp");
 			swordnxp = nbt.getDouble("swordnxp");
+			slot4ability = nbt.getString("slot4ability");
 		}
 	}
 
@@ -316,6 +320,7 @@ public class SikunbenssololevelingModVariables {
 					variables.SwordMastery = message.data.SwordMastery;
 					variables.swordcxp = message.data.swordcxp;
 					variables.swordnxp = message.data.swordnxp;
+					variables.slot4ability = message.data.slot4ability;
 				}
 			});
 			context.setPacketHandled(true);

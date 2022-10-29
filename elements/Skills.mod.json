@@ -1,0 +1,225 @@
+{
+  "_fv": 33,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:slot1ability>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "<VAR:slot1ability>",
+          "x": 369,
+          "y": 136
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:slot1ability>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "<VAR:slot1ability>",
+          "x": 368,
+          "y": 135
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:slot2ability>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "<VAR:slot2ability>",
+          "x": 368,
+          "y": 159
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:slot2ability>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "<VAR:slot2ability>",
+          "x": 367,
+          "y": 158
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:slot3ability>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "<VAR:slot3ability>",
+          "x": 369,
+          "y": 180
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:slot3ability>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "<VAR:slot3ability>",
+          "x": 368,
+          "y": 179
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:slot4ability>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "<VAR:slot4ability>",
+          "x": 369,
+          "y": 201
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:slot4ability>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "<VAR:slot4ability>",
+          "x": 368,
+          "y": 200
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slottype2.png",
+          "use1Xscale": true,
+          "name": "slottype2.png",
+          "x": 3,
+          "y": 164
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smalltype1.png",
+          "use1Xscale": true,
+          "name": "smalltype1.png",
+          "x": 405,
+          "y": 171
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smalltype1.png",
+          "use1Xscale": true,
+          "name": "smalltype1.png",
+          "x": 405,
+          "y": 150
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smalltype1.png",
+          "use1Xscale": true,
+          "name": "smalltype1.png",
+          "x": 405,
+          "y": 129
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smalltype1.png",
+          "use1Xscale": true,
+          "name": "smalltype1.png",
+          "x": 405,
+          "y": 192
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hourglass.png",
+          "use1Xscale": false,
+          "name": "hourglass.png",
+          "x": 13,
+          "y": 166
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hourglass.png",
+          "use1Xscale": true,
+          "name": "hourglass.png",
+          "x": 410,
+          "y": 130
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hourglass.png",
+          "use1Xscale": true,
+          "name": "hourglass.png",
+          "x": 410,
+          "y": 151
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hourglass.png",
+          "use1Xscale": true,
+          "name": "hourglass.png",
+          "x": 410,
+          "y": 172
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hourglass.png",
+          "use1Xscale": true,
+          "name": "hourglass.png",
+          "x": 410,
+          "y": 193
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "SkillsOverlayDisplayOverlayIngame"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

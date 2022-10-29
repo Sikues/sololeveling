@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
@@ -24,6 +25,7 @@ public class StatPageScreen extends AbstractContainerScreen<StatPageMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	EditBox amount;
 
 	public StatPageScreen(StatPageMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -32,8 +34,8 @@ public class StatPageScreen extends AbstractContainerScreen<StatPageMenu> {
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 190;
-		this.imageHeight = 152;
+		this.imageWidth = 157;
+		this.imageHeight = 197;
 	}
 
 	@Override
@@ -41,6 +43,7 @@ public class StatPageScreen extends AbstractContainerScreen<StatPageMenu> {
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
+		amount.render(ms, mouseX, mouseY, partialTicks);
 	}
 
 	@Override
@@ -49,8 +52,8 @@ public class StatPageScreen extends AbstractContainerScreen<StatPageMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/stats.png"));
-		this.blit(ms, this.leftPos + -6, this.topPos + -2, 0, 0, 200, 200, 200, 200);
+		RenderSystem.setShaderTexture(0, new ResourceLocation("sikunbenssololeveling:textures/screens/statpageback.png"));
+		this.blit(ms, this.leftPos + -1, this.topPos + -3, 0, 0, 159, 202, 159, 202);
 
 		RenderSystem.disableBlend();
 	}
@@ -61,32 +64,39 @@ public class StatPageScreen extends AbstractContainerScreen<StatPageMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+		if (amount.isFocused())
+			return amount.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
 	}
 
 	@Override
 	public void containerTick() {
 		super.containerTick();
+		amount.tick();
 	}
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
+		this.font.draw(poseStack, "\u00A7lStrength: ", 16, 89, -16777216);
 		this.font.draw(poseStack,
 				"\u00A7lStrength: \u00A7r" + (int) ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).Strength) + "",
-				0, 48, -1);
+				15, 88, -1);
+		this.font.draw(poseStack, "\u00A7lVitality:", 16, 69, -16777216);
 		this.font.draw(poseStack,
 				"\u00A7lVitality: \u00A7r" + (int) ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).vitality) + "",
-				0, 69, -1);
+				15, 68, -1);
+		this.font.draw(poseStack, "\u00A7lAgility:", 16, 49, -16777216);
 		this.font.draw(poseStack,
 				"\u00A7lAgility: \u00A7r" + (int) ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).agility) + "",
-				0, 90, -1);
+				15, 48, -1);
+		this.font.draw(poseStack, "\u00A7lIntelligence:", 16, 109, -16777216);
 		this.font.draw(poseStack,
 				"\u00A7lIntelligence: \u00A7r" + (int) ((entity.getCapability(SikunbenssololevelingModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SikunbenssololevelingModVariables.PlayerVariables())).Intelligence) + "",
-				0, 110, -1);
+				15, 108, -1);
 	}
 
 	@Override
@@ -99,13 +109,39 @@ public class StatPageScreen extends AbstractContainerScreen<StatPageMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + -16, this.topPos + 42, 9, 20, new TextComponent("+"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 41, 9, 20, new TextComponent("+"), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + -16, this.topPos + 63, 9, 20, new TextComponent("+"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 61, 9, 20, new TextComponent("+"), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + -16, this.topPos + 84, 9, 20, new TextComponent("+"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 81, 9, 20, new TextComponent("+"), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + -16, this.topPos + 105, 9, 20, new TextComponent("+"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 101, 9, 20, new TextComponent("+"), e -> {
 		}));
+		amount = new EditBox(this.font, this.leftPos + 98, this.topPos + 129, 55, 20, new TextComponent("1")) {
+			{
+				setSuggestion("1");
+			}
+
+			@Override
+			public void insertText(String text) {
+				super.insertText(text);
+				if (getValue().isEmpty())
+					setSuggestion("1");
+				else
+					setSuggestion(null);
+			}
+
+			@Override
+			public void moveCursorTo(int pos) {
+				super.moveCursorTo(pos);
+				if (getValue().isEmpty())
+					setSuggestion("1");
+				else
+					setSuggestion(null);
+			}
+		};
+		guistate.put("text:amount", amount);
+		amount.setMaxLength(32767);
+		this.addWidget(this.amount);
 	}
 }

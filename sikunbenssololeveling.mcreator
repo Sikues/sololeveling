@@ -794,6 +794,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1004,6 +1020,15 @@
         ]
       },
       "path": "~/LevelStuff/sword mastery"
+    },
+    {
+      "name": "Skills",
+      "type": "overlay",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skills",
+      "path": "~/GUI"
     }
   ],
   "variable_elements": [
@@ -1210,6 +1235,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "100.0"
+    },
+    {
+      "name": "slot4ability",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     }
   ],
   "sound_elements": [],
@@ -1267,6 +1298,10 @@
           {
             "name": "Xpbar",
             "children": []
+          },
+          {
+            "name": "statadd",
+            "children": []
           }
         ]
       },
@@ -1318,7 +1353,11 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "geckolib",
+      "playeranimator",
+      "allmods"
+    ],
     "currentGenerator": "forge-1.18.2",
     "credits": "https://www.curseforge.com/members/siikkuu/",
     "modElementsPackage": "mc.sikunbenssololeveling",
